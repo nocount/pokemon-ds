@@ -43,8 +43,4 @@ def run_game():
 
 
 if __name__ == '__main__':
-
     run_game()
-    # utils.print_prediction_errors(eigth_gen_df, preds)
-    # score = model.score(test_X, test_y)
-    # print(score)
