@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 if __name__ == '__main__':
 
     # Read data
-    df = pd.read_csv('pokemon_data.csv')
+    df = pd.read_csv('data/pokemon_data.csv')
 
     # Limiting the training data to seven generations so we can use the 8th for testing inference later
     seven_gen_df = df[0:809]
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     print(score)
 
     # Save model
-    with open('model_chkpt1.pickle', 'wb') as checkpoint_file:
+    with open('checkpoints/model_chkpt1.pickle', 'wb') as checkpoint_file:
         pickle.dump(model, checkpoint_file)
 
     print('Praise the Sun')

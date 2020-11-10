@@ -42,7 +42,8 @@ def scrape_single_pokemon(url):
 		is_legendary = 1
 
 	df = pd.DataFrame([[national_id, name, type_1, type_2, hp, attack, defense, sp_attack, sp_defense, speed, total, is_legendary]], columns=['id', 'name', 'type_1', 'type_2', 'hp', 'attack', 'defense', 'sp_attack', 'sp_defense', 'speed', 'total', 'is_legendary'])
-	print(df)
+	# print(df)
+	print(national_id)
 	return df
 
 
@@ -70,7 +71,7 @@ def scrape_pokemon_data(url):
 if __name__ == '__main__':
 
 	pokemon = scrape_pokemon_data('https://pokemondb.net/pokedex/national')
-	pokemon.to_csv('pokemon_data.csv', index=False)
+	pokemon.to_csv('data/pokemon_data.csv', index=False)
 
 	print(sum(pokemon['is_legendary']))
 	# print(pokemon)

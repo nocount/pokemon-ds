@@ -13,7 +13,7 @@ def run_game():
     print('Starting game')
 
     # Load data for guessing with inference
-    df = pd.read_csv('pokemon_data.csv')
+    df = pd.read_csv('data/pokemon_data.csv')
     eigth_gen_df = df[809:]
     eigth_gen_df = utils.clean_types(eigth_gen_df)
     user_df = eigth_gen_df.drop(['name', 'id'], axis=1)
@@ -22,7 +22,7 @@ def run_game():
     test_y = eigth_gen_df['is_legendary']
 
     # Load saved logreg model
-    model = pickle.load(open('model_chkpt1.pickle', 'rb'))
+    model = pickle.load(open('checkpoints/model_chkpt1.pickle', 'rb'))
 
     for i in range(10):
 

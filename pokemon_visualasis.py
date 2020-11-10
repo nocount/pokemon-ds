@@ -12,7 +12,7 @@ from matplotlib import pyplot as plt
 
 if __name__ == '__main__':
 	# Grouping
-	pokemon_df = pd.read_csv('pokemon_data.csv')
+	pokemon_df = pd.read_csv('data/pokemon_data.csv')
 	legendary_df = pokemon_df[pokemon_df['is_legendary']==1]
 
 	legendary_primary_type = legendary_df.groupby(['type_1']).count()['is_legendary']
